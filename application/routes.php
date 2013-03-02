@@ -42,10 +42,21 @@ Route::get('content', function() {
 });
 
 Route::post('content', function() {
-	echo Input::get('name'); // Dayle
+	echo Input::get('name'); // Lautenai
 	echo "<br />";
 	echo Input::get('age'); // 27
 });
+
+Route::get('content/json', function() {
+	// our $data array, soon to be JSON
+	$data = array(
+		'$name' => 'Dummy',
+		'size' => 'XL',
+		'color' => 'Blue'
+		);
+	return Response::json($data);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers
