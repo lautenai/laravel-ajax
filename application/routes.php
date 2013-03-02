@@ -50,7 +50,7 @@ Route::post('content', function() {
 Route::get('content/json', function() {
 	// our $data array, soon to be JSON
 	$data = array(
-		'$name' => 'Dummy',
+		'name' => 'Dummy',
 		'size' => 'XL',
 		'color' => 'Blue'
 		);
