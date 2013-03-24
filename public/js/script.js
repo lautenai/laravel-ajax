@@ -23,5 +23,17 @@ $(document).ready(function() {
 		}, function(data) {
 			$('#content').html(data);
 		});
-	})
+	});
+
+	$('#load-content-json').click(function(e) {
+		// prevent the links default action
+		// from firing
+		e.preventDefault();
+		// attempt to GET the new content
+		// attempt a POST request with
+		// some additional data
+		$.get(BASE+'/content/json', function(data) {
+			$('#content').html(data);
+		});
+	});
 });

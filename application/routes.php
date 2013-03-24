@@ -31,6 +31,7 @@
 |		});
 |
 */
+Route::controller(Controller::detect());
 
 Route::get('/', function()
 {
@@ -48,13 +49,12 @@ Route::post('content', function() {
 });
 
 Route::get('content/json', function() {
-	// our $data array, soon to be JSON
-	$data = array(
-		'name' => 'Dummy',
-		'size' => 'XL',
-		'color' => 'Blue'
-		);
-	return Response::json($data);
+	// our $months array, soon to be JSON
+	$months = array(1 => 'Jan.', 2 => 'Feb.', 3 => 'Mar.', 4 => 'Apr.', 5 => 'May', 6 => 'Jun.', 7 => 'Jul.', 8 => 'Aug.', 9 => 'Sep.', 10 => 'Oct.', 11 => 'Nov.', 12 => 'Dec.');
+	echo "JSON";
+	echo "<br />";
+	echo Response::json($months);
+	//return Response::json($months);
 });
 
 /*
